@@ -3,27 +3,40 @@ export default function Header() {
     <header className="bg-cream">
       <div
         className="
-          max-w-[1680px] mx-auto
-          px-8 lg:px-28
-          py-12
+          max-w-[1800px] mx-auto
+          px-10 lg:px-32
+          pt-6 pb-4
           flex items-center justify-between
         "
       >
+        {/* LEFT LOGO */}
         <p
           className="
             font-serif
-            text-[32px]
-            font-medium
+            text-[30px]
+            lg:text-[34px]
+            font-semibold
             text-textDark
-            tracking-[-0.01em]
+            leading-none
           "
         >
           Lilac Template
         </p>
 
-        <nav className="flex gap-14">
-          <a className="text-[17px] text-textDark">Blog</a>
-          <a className="text-[17px] text-textDark">Contact</a>
+        {/* RIGHT NAV */}
+        <nav className="flex gap-12">
+          <a
+            href="#"
+            className="text-[16px] font-medium text-textDark"
+          >
+            Blog
+          </a>
+          <a
+            href="#"
+            className="text-[16px] font-medium text-textDark"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </header>
