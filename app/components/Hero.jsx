@@ -6,7 +6,7 @@ export default function Hero() {
       <div
         className="
           max-w-[1600px] mx-auto
-          px-6 sm:px-10 lg:px-24
+          px-6 sm:px-8 lg:px-[8%]
           pt-10 lg:pt-16
           pb-24 lg:pb-32
           grid grid-cols-1 lg:grid-cols-[0.3fr_0.5fr]
