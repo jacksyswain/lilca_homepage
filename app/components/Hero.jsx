@@ -1,8 +1,10 @@
 import RevealItem from "./RevealItem";
+import Header from "./Header";
 
 export default function Hero() {
   return (
     <section className="bg-cream">
+      <Header/>
       <div
         className="
           max-w-[1600px] mx-auto
