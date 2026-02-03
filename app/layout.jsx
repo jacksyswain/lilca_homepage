@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>
+      <body className="bg-[#fbf8f3] text-textDark">
         {children}
       </body>
     </html>
