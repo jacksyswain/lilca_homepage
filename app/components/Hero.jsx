@@ -1,50 +1,53 @@
 import RevealItem from "./RevealItem";
+import Image from "next/image";
+
 
 export default function Hero() {
   return (
     <section className="pt-[30px]">
       <div
         className="
-
           max-w-[1600px] mx-auto
           grid grid-cols-1 lg:grid-cols-[40%_60%]
           min-h-[90vh]
         "
       >
         {/* LEFT IMAGE — 40% */}
-        <div className="flex items-center justify-center px-[5vw]">
+        <div className="flex items-center justify-start px-[5vw]">
           <RevealItem delay={0.01}>
             <div
               className="
-                w-[300px] h-[420px]
-                sm:w-[420px] sm:h-[560px]
-                lg:w-[520px] lg:h-[680px]
+                w-[360px] h-[460px]
+                sm:w-[480px] sm:h-[620px]
+                lg:w-[560px] lg:h-[740px]
                 rounded-t-[999px] rounded-b-none
                 overflow-hidden
                 bg-sand
+               
+                mt-[5%]
               "
             >
-              <img
-                src="/images/hero.jpg"
-                alt="Lilac flowers"
-                className="w-full h-full object-cover"
-              />
+            <img
+  src="/images/hero.png"
+  alt="Lilac flowers"
+  className="w-full h-full object-cover"
+/>
             </div>
           </RevealItem>
         </div>
 
         {/* RIGHT CONTENT — 60% */}
         <div className="flex items-center justify-center px-[5vw]">
-          <div className="max-w-[520px] text-center lg:text-left">
+          <div className="max-w-[560px] text-center lg:text-left">
             <RevealItem delay={0.02}>
               <h1
                 className="
                   font-serif text-textDark
-                  text-[68px]
-                  sm:text-[48px]
-                  lg:text-[64px]
-                  leading-[1.05]
-                  mb-10
+                  text-[48px]
+                  sm:text-[56px]
+                  lg:text-[96px]
+                  leading-[1.02]
+                  mb-12
                 "
               >
                 Live your life
