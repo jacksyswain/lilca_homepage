@@ -1,7 +1,6 @@
 import RevealItem from "./RevealItem";
 import Image from "next/image";
 
-
 export default function Hero() {
   return (
     <section className="pt-[30px]">
@@ -17,28 +16,30 @@ export default function Hero() {
           <RevealItem delay={0.01}>
             <div
               className="
+                relative
                 w-[360px] h-[460px]
                 sm:w-[480px] sm:h-[620px]
                 lg:w-[560px] lg:h-[740px]
                 rounded-t-[999px] rounded-b-none
                 overflow-hidden
                 bg-sand
-               
                 mt-[5%]
               "
             >
-            <img
-  src="/images/hero.png"
-  alt="Lilac flowers"
-  className="w-full h-full object-cover"
-/>
+              <Image
+                src="/images/hero.png"
+                alt="Lilac flowers"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </RevealItem>
         </div>
 
         {/* RIGHT CONTENT — 60% */}
         <div className="flex items-center justify-center px-[5vw]">
-          <div className="max-w-[560px] text-center lg:text-left">
+          <div className="max-w-[560px] text-center">
             <RevealItem delay={0.02}>
               <h1
                 className="
@@ -62,6 +63,9 @@ export default function Hero() {
                   text-[16px]
                   sm:text-[17px]
                   lg:text-[18px]
+                  font-semibold
+                  tracking-wide
+                  text-center
                   mb-12
                 "
               >
@@ -70,20 +74,22 @@ export default function Hero() {
             </RevealItem>
 
             <RevealItem delay={0.04}>
-              <button
-                className="
-                  inline-flex items-center gap-4
-                  border border-textDark
-                  px-10 py-4
-                  text-[13px] tracking-widest
-                  uppercase
-                  hover:bg-textDark hover:text-cream
-                  transition
-                "
-              >
-                Connect with me
-                <span aria-hidden>→</span>
-              </button>
+              <div className="flex justify-center">
+                <button
+                  className="
+                    inline-flex items-center gap-4
+                    border border-textDark
+                    px-10 py-4
+                    text-[13px] tracking-widest
+                    uppercase
+                    hover:bg-textDark hover:text-cream
+                    transition
+                  "
+                >
+                  Connect with me
+                  <span aria-hidden>→</span>
+                </button>
+              </div>
             </RevealItem>
           </div>
         </div>
