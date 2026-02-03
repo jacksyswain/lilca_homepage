@@ -2,9 +2,10 @@ import RevealItem from "./RevealItem";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="pt-[30px]">
       <div
         className="
+
           max-w-[1600px] mx-auto
           grid grid-cols-1 lg:grid-cols-[40%_60%]
           min-h-[90vh]
@@ -39,7 +40,7 @@ export default function Hero() {
               <h1
                 className="
                   font-serif text-textDark
-                  text-[38px]
+                  text-[68px]
                   sm:text-[48px]
                   lg:text-[64px]
                   leading-[1.05]
