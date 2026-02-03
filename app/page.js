@@ -12,42 +12,39 @@ import Reveal from "./components/Reveal";
 export default function Home() {
   return (
     <>
-      {/* Header stays static (no animation) */}
       <Header />
 
-      {/* Page sections animate on scroll */}
-      <Reveal>
-        <Hero />
-      </Reveal>
+      {/* Hero is NOT animated as a block */}
+      <Hero />
 
-      <Reveal delay={0.05}>
+      {/* Section-level animation only */}
+      <Reveal>
         <Intro />
       </Reveal>
 
-      <Reveal delay={0.08}>
+      <Reveal delay={0.05}>
         <Specialties />
       </Reveal>
 
-      <Reveal delay={0.1}>
+      <Reveal delay={0.08}>
         <SplitSection />
       </Reveal>
 
-      <Reveal delay={0.12}>
+      <Reveal delay={0.1}>
         <About />
       </Reveal>
 
-      <Reveal delay={0.14}>
+      <Reveal delay={0.12}>
         <FAQ />
       </Reveal>
 
-      <Reveal delay={0.16}>
+      <Reveal delay={0.14}>
         <CTA />
       </Reveal>
 
-      <Reveal delay={0.18}>
+      <Reveal delay={0.16}>
         <Footer />
       </Reveal>
     </>
   );
 }
-
