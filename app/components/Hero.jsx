@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="pt-[30px]">
+    <section className="pt-[3vh]">
       <div
         className="
-          max-w-[1600px] mx-auto
+          max-w-[90rem] mx-auto
           grid grid-cols-1 lg:grid-cols-[40%_60%]
           min-h-[90vh]
         "
@@ -17,13 +17,13 @@ export default function Hero() {
             <div
               className="
                 relative
-                w-[360px] h-[460px]
-                sm:w-[480px] sm:h-[620px]
-                lg:w-[560px] lg:h-[740px]
-                rounded-t-[999px] rounded-b-none
+                w-[35vw]
+                max-w-[36rem]
+                aspect-[3/4]
+                rounded-t-[50vw]
                 overflow-hidden
                 bg-sand
-                mt-[5%]
+                mt-[5vh]
               "
             >
               <Image
@@ -39,16 +39,15 @@ export default function Hero() {
 
         {/* RIGHT CONTENT — 60% */}
         <div className="flex items-center justify-center px-[5vw]">
-          <div className="max-w-[560px] text-center">
+          <div className="max-w-[40vw] text-center">
+            
             <RevealItem delay={0.02}>
               <h1
                 className="
                   font-serif text-textDark
-                  text-[48px]
-                  sm:text-[56px]
-                  lg:text-[96px]
-                  leading-[1.02]
-                  mb-12
+                  text-[clamp(2.8rem,6vw,6rem)]
+                  leading-[1.05]
+                  mb-[6vh]
                 "
               >
                 Live your life
@@ -60,13 +59,10 @@ export default function Hero() {
             <RevealItem delay={0.03}>
               <p
                 className="
-                  text-[16px]
-                  sm:text-[17px]
-                  lg:text-[18px]
+                  text-[clamp(1rem,1.2vw,1.15rem)]
                   font-semibold
                   tracking-wide
-                  text-center
-                  mb-12
+                  mb-[6vh]
                 "
               >
                 Therapy for Adults in Minneapolis, MN.
@@ -77,11 +73,11 @@ export default function Hero() {
               <div className="flex justify-center">
                 <button
                   className="
-                    inline-flex items-center gap-4
+                    inline-flex items-center gap-[1vw]
                     border border-textDark
-                    px-10 py-4
-                    text-[13px] tracking-widest
-                    uppercase
+                    px-[3vw] py-[1.5vh]
+                    text-[clamp(0.75rem,0.9vw,0.85rem)]
+                    tracking-widest uppercase
                     hover:bg-textDark hover:text-cream
                     transition
                   "
@@ -91,6 +87,7 @@ export default function Hero() {
                 </button>
               </div>
             </RevealItem>
+
           </div>
         </div>
       </div>
