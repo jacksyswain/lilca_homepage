@@ -41,7 +41,7 @@ export default function Intro() {
       flex items-center justify-center gap-4
       border-t border-textDark
       py-6
-      text-[13px] tracking-widest uppercase
+      text-[20px] tracking-widest uppercase
       hover:bg-textDark hover:text-cream
       transition
     "
