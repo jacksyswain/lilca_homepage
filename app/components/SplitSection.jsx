@@ -8,13 +8,13 @@ export default function SplitSection() {
   return (
     <section className="bg-cream">
       <div className="flex flex-col lg:flex-row min-h-[110vh]">
-        
-        {/* LEFT — IMAGE (50vw) */}
+
+        {/* LEFT — IMAGE */}
         <RevealItem delay={baseDelay}>
           <div
             className="w-full lg:w-[50vw] min-h-[110vh]"
             style={{
-              backgroundImage: "url('/images/split.png')", // replace with your image
+              backgroundImage: "url('/images/split.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -22,11 +22,11 @@ export default function SplitSection() {
           />
         </RevealItem>
 
-        {/* RIGHT — CONTENT (50vw) */}
-        <div className="w-full lg:w-[50vw] bg-[#d6d3dc] flex flex-col px-[6vw] py-[10vh]">
-          
-          {/* CONTENT */}
-          <div>
+        {/* RIGHT — CONTENT */}
+        <div className="w-full lg:w-[50vw] bg-[#d6d3dc] flex flex-col min-h-[110vh] px-[6vw]">
+
+          {/* CONTENT AREA (padding only here) */}
+          <div className="pt-[10vh]">
             <RevealItem delay={baseDelay + 0.01}>
               <h2 className="font-serif text-[clamp(2.2rem,3vw,3rem)] mb-[4vh] leading-tight">
                 You don’t have to do this all alone.
@@ -43,19 +43,15 @@ export default function SplitSection() {
               <RevealItem delay={baseDelay + 0.03}>
                 <li>Persistent feelings of sadness or hopelessness</li>
               </RevealItem>
-
               <RevealItem delay={baseDelay + 0.04}>
                 <li>Trouble focusing or making decisions</li>
               </RevealItem>
-
               <RevealItem delay={baseDelay + 0.05}>
                 <li>Difficulty maintaining relationships</li>
               </RevealItem>
-
               <RevealItem delay={baseDelay + 0.06}>
                 <li>Feeling constantly exhausted or unmotivated</li>
               </RevealItem>
-
               <RevealItem delay={baseDelay + 0.07}>
                 <li>A pervasive sense of being overwhelmed</li>
               </RevealItem>
@@ -69,28 +65,26 @@ export default function SplitSection() {
             </RevealItem>
           </div>
 
-          {/* BOTTOM CTA — STICKS TO BOTTOM */}
-          <RevealItem delay={baseDelay + 0.09}>
-            <button
-              className="
-                mt-auto
-                w-full
-                
-                flex items-center justify-center
-                gap-3
-                border-t border-textDark
-                py-[3vh]
-                text-[clamp(0.9rem,1vw,1rem)]
-                tracking-widest
-                uppercase
-                hover:bg-textDark hover:text-cream
-                transition
-              "
-            >
-              WORK WITH ME
-              <span aria-hidden>→</span>
-            </button>
-          </RevealItem>
+          {/* BUTTON — TRUE BOTTOM EDGE */}
+          <div className="mt-auto -mx-[6vw]">
+            <RevealItem delay={baseDelay + 0.09}>
+              <button
+                className="
+                  w-full
+                  flex items-center justify-center gap-3
+                  border-t border-textDark
+                  py-[3vh]
+                  text-[clamp(0.9rem,1vw,1rem)]
+                  tracking-widest uppercase
+                  hover:bg-textDark hover:text-cream
+                  transition
+                "
+              >
+                WORK WITH ME
+                <span aria-hidden>→</span>
+              </button>
+            </RevealItem>
+          </div>
 
         </div>
       </div>
