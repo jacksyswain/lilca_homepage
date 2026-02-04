@@ -28,13 +28,7 @@ export default function Specialties() {
 
   return (
     <section className="bg-cream">
-      <div
-        className="
-          max-w-[1600px] mx-auto
-          px-[6%]
-          py-32
-        "
-      >
+      <div className="max-w-[1600px] mx-auto px-[6%] py-32">
         {/* HEADING */}
         <RevealItem delay={baseDelay}>
           <h2 className="font-serif text-[40px] text-textDark text-center mb-20">
@@ -55,9 +49,8 @@ export default function Specialties() {
                   p-10
                   min-h-[520px]
                   flex flex-col
-                  items-center
-                  text-center
-                  bg-[#e9e4dc]
+                  text-left
+                  bg-extra
                 "
               >
                 {/* TEXT */}
@@ -70,7 +63,7 @@ export default function Specialties() {
                   </p>
                 </div>
 
-                {/* IMAGE */}
+                {/* IMAGE (CENTERED ONLY IMAGE) */}
                 <div
                   className="
                     mt-10
@@ -78,6 +71,7 @@ export default function Specialties() {
                     rounded-full
                     overflow-hidden
                     bg-sand
+                    mx-auto
                   "
                   style={{
                     backgroundImage: `url(${item.image})`,
