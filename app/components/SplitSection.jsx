@@ -14,7 +14,7 @@ export default function SplitSection() {
           <div
             className="w-full lg:w-[50vw] min-h-[110vh]"
             style={{
-              backgroundImage: "url('/images/split.jpg')", // replace with your image
+              backgroundImage: "url('/images/split.png')", // replace with your image
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -75,6 +75,7 @@ export default function SplitSection() {
               className="
                 mt-auto
                 w-full
+                
                 flex items-center justify-center
                 gap-3
                 border-t border-textDark
