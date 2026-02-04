@@ -1,3 +1,5 @@
+"use client";
+
 import RevealItem from "./RevealItem";
 
 export default function SplitSection() {
@@ -5,48 +7,90 @@ export default function SplitSection() {
 
   return (
     <section className="bg-cream">
-      <div
-        className="
-          max-w-[1600px] mx-auto
-          grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr]
-        "
-      >
-        {/* LEFT IMAGE BLOCK */}
-        <div className="bg-cream px-6 sm:px-8 lg:px-[8%] py-24 lg:py-32 flex items-center">
-          <RevealItem delay={baseDelay}>
-            <div
-              className="
-                w-full
-                h-[320px]
-                sm:h-[400px]
-                lg:h-[500px]
-                bg-sand
-              "
-            />
-          </RevealItem>
-        </div>
+      <div className="flex flex-col lg:flex-row min-h-[110vh]">
+        
+        {/* LEFT — IMAGE (50vw) */}
+        <RevealItem delay={baseDelay}>
+          <div
+            className="w-full lg:w-[50vw] min-h-[110vh]"
+            style={{
+              backgroundImage: "url('/images/split.jpg')", // replace with your image
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </RevealItem>
 
-        {/* RIGHT CONTENT BLOCK */}
-        <div className="bg-[#d6d3dc] px-6 sm:px-8 lg:px-[8%] py-24 lg:py-32">
-          <RevealItem delay={baseDelay + 0.01}>
-            <h2 className="font-serif text-[28px] lg:text-[32px] mb-6">
-              You don’t have to do this alone.
-            </h2>
-          </RevealItem>
+        {/* RIGHT — CONTENT (50vw) */}
+        <div className="w-full lg:w-[50vw] bg-[#d6d3dc] flex flex-col px-[6vw] py-[10vh]">
+          
+          {/* CONTENT */}
+          <div>
+            <RevealItem delay={baseDelay + 0.01}>
+              <h2 className="font-serif text-[clamp(2.2rem,3vw,3rem)] mb-[4vh] leading-tight">
+                You don’t have to do this all alone.
+              </h2>
+            </RevealItem>
 
-          <ul className="text-[14px] lg:text-[15px] space-y-3">
             <RevealItem delay={baseDelay + 0.02}>
-              <li>• Anxiety &amp; overwhelm</li>
+              <p className="text-[clamp(1rem,1.1vw,1.15rem)] mb-[4vh]">
+                If you are facing any of these, there’s hope:
+              </p>
             </RevealItem>
 
-            <RevealItem delay={baseDelay + 0.03}>
-              <li>• Life transitions</li>
-            </RevealItem>
+            <ul className="space-y-[2vh] text-[clamp(1rem,1.1vw,1.15rem)] list-disc pl-6">
+              <RevealItem delay={baseDelay + 0.03}>
+                <li>Persistent feelings of sadness or hopelessness</li>
+              </RevealItem>
 
-            <RevealItem delay={baseDelay + 0.04}>
-              <li>• Emotional balance</li>
+              <RevealItem delay={baseDelay + 0.04}>
+                <li>Trouble focusing or making decisions</li>
+              </RevealItem>
+
+              <RevealItem delay={baseDelay + 0.05}>
+                <li>Difficulty maintaining relationships</li>
+              </RevealItem>
+
+              <RevealItem delay={baseDelay + 0.06}>
+                <li>Feeling constantly exhausted or unmotivated</li>
+              </RevealItem>
+
+              <RevealItem delay={baseDelay + 0.07}>
+                <li>A pervasive sense of being overwhelmed</li>
+              </RevealItem>
+            </ul>
+
+            <RevealItem delay={baseDelay + 0.08}>
+              <p className="mt-[5vh] text-[clamp(1rem,1.1vw,1.15rem)]">
+                With empathy and guidance, we’ll work together to navigate
+                the challenges life throws your way.
+              </p>
             </RevealItem>
-          </ul>
+          </div>
+
+          {/* BOTTOM CTA — STICKS TO BOTTOM */}
+          <RevealItem delay={baseDelay + 0.09}>
+            <button
+              className="
+                mt-auto
+                w-full
+                flex items-center justify-center
+                gap-3
+                border-t border-textDark
+                py-[3vh]
+                text-[clamp(0.9rem,1vw,1rem)]
+                tracking-widest
+                uppercase
+                hover:bg-textDark hover:text-cream
+                transition
+              "
+            >
+              WORK WITH ME
+              <span aria-hidden>→</span>
+            </button>
+          </RevealItem>
+
         </div>
       </div>
     </section>
