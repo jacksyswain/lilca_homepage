@@ -1,7 +1,29 @@
+"use client";
+
 import RevealItem from "./RevealItem";
 
+const data = [
+  {
+    title: "Self-Esteem",
+    text:
+      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+    image: "/images/special-1.jpg",
+  },
+  {
+    title: "Relationships",
+    text:
+      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+    image: "/images/special-2.jpg",
+  },
+  {
+    title: "Burnout",
+    text:
+      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+    image: "/images/special-3.jpg",
+  },
+];
+
 export default function Specialties() {
-  const items = ["Self Reflection", "Relationships", "Growth"];
   const baseDelay = 0.01;
 
   return (
@@ -9,46 +31,60 @@ export default function Specialties() {
       <div
         className="
           max-w-[1600px] mx-auto
-          px-6 sm:px-8 lg:px-[8%]
-          py-24 lg:py-32
-          text-center
+          px-[6%]
+          py-32
         "
       >
-        {/* SECTION HEADING */}
+        {/* HEADING */}
         <RevealItem delay={baseDelay}>
-          <h2 className="font-serif text-[28px] lg:text-[32px] mb-16">
+          <h2 className="font-serif text-[40px] text-textDark text-center mb-20">
             My Specialties
           </h2>
         </RevealItem>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {items.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {data.map((item, index) => (
             <RevealItem
-              key={item}
-              delay={baseDelay + 0.01 + index * 0.02}
+              key={item.title}
+              delay={baseDelay + 0.02 * index}
             >
-              <div>
+              <div
+                className="
+                  border border-textDark/70
+                  p-10
+                  min-h-[520px]
+                  flex flex-col
+                  items-center
+                  text-center
+                  bg-[#e9e4dc]
+                "
+              >
+                {/* TEXT */}
+                <div className="mb-auto">
+                  <h3 className="font-serif text-[22px] mb-6">
+                    {item.title}
+                  </h3>
+                  <p className="text-[16px] leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+
                 {/* IMAGE */}
                 <div
                   className="
-                    w-48 h-48
-                    mx-auto
-                    bg-sand
+                    mt-10
+                    w-[220px] h-[220px]
                     rounded-full
-                    mb-6
+                    overflow-hidden
+                    bg-sand
                   "
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 />
-
-                {/* TITLE */}
-                <h3 className="font-serif mb-2">
-                  {item}
-                </h3>
-
-                {/* TEXT */}
-                <p className="text-[14px] lg:text-[15px]">
-                  Personalized support designed around your needs.
-                </p>
               </div>
             </RevealItem>
           ))}
