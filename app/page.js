@@ -8,6 +8,7 @@ import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Reveal from "./components/Reveal";
+import ProfessionalBackground from "./components/ProfessionalBackground";
 
 export default function Home() {
   return (
@@ -36,6 +37,9 @@ export default function Home() {
 
       <Reveal delay={0.12}>
         <FAQ />
+      </Reveal>
+      <Reveal delay={0.14}>
+        <ProfessionalBackground />
       </Reveal>
 
       <Reveal delay={0.14}>
