@@ -7,17 +7,17 @@ const items = [
   {
     title: "Education",
     content:
-      "Details about education will go here. You can include degrees, universities, or special training.",
+      "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
   },
   {
     title: "Licensure",
     content:
-      "Licensure details such as license number, state, and validity period.",
+      "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
   },
   {
     title: "Certifications",
     content:
-      "Any certifications, workshops, or continuing education credentials.",
+      "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
   },
 ];
 
