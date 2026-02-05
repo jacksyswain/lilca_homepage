@@ -65,16 +65,15 @@ export default function FAQ() {
               FAQs
             </h2>
           </RevealItem>
-
-          <div className="divide-y divide-textDark/30">
+<div className="border-t border-textDark/40">
   {faqs.map((item, i) => (
     <RevealItem key={i} delay={baseDelay + 0.02 * i}>
-      <div>
+      <div className="border-b border-textDark/40">
         <button
           onClick={() => setOpen(open === i ? null : i)}
           className="
             w-full
-            py-[3.5vh]
+            py-[4vh]
             flex items-center gap-[1.6rem]
             text-left
             font-medium
@@ -94,7 +93,7 @@ export default function FAQ() {
             {open === i ? "−" : "+"}
           </span>
 
-          {/* QUESTION TEXT — 200% BIGGER */}
+          {/* QUESTION TEXT — BIG */}
           <span className="text-[clamp(1.8rem,2.4vw,2.2rem)]">
             {item.q}
           </span>
@@ -104,7 +103,7 @@ export default function FAQ() {
           <p
             className="
               pl-[4.2rem]
-              pb-[3.5vh]
+              pb-[4vh]
               text-[clamp(1.3rem,1.6vw,1.5rem)]
               leading-relaxed
               text-textDark/80
@@ -117,6 +116,8 @@ export default function FAQ() {
     </RevealItem>
   ))}
 </div>
+
+
 
         </div>
       </div>
