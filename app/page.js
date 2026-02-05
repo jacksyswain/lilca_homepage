@@ -9,6 +9,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Reveal from "./components/Reveal";
 import ProfessionalBackground from "./components/ProfessionalBackground";
+import Copyright from "./components/Copyright";
 
 export default function Home() {
   return (
@@ -48,6 +49,10 @@ export default function Home() {
 
       <Reveal delay={0.16}>
         <Footer />
+      </Reveal>
+
+      <Reveal delay={0.16}>
+        <Copyright />
       </Reveal>
     </>
   );
