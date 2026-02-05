@@ -11,13 +11,15 @@ export default function Hero() {
           min-h-[90vh]
         "
       >
-        {/* LEFT IMAGE — 40% */}
-        <div className="flex items-center justify-start px-[5vw]">
+        {/* IMAGE */}
+        <div className="flex items-center justify-center lg:justify-start px-[5vw]">
           <RevealItem delay={0.01}>
             <div
               className="
                 relative
-                w-[35vw]
+                w-[80vw]
+                sm:w-[60vw]
+                lg:w-[35vw]
                 max-w-[36rem]
                 aspect-[3/4]
                 rounded-t-[50vw]
@@ -37,15 +39,14 @@ export default function Hero() {
           </RevealItem>
         </div>
 
-        {/* RIGHT CONTENT — 60% */}
+        {/* TEXT */}
         <div className="flex items-center justify-center px-[5vw]">
-          <div className="max-w-[40vw] text-center">
-            
+          <div className="w-[90vw] lg:max-w-[40vw] text-center">
             <RevealItem delay={0.02}>
               <h1
                 className="
                   font-serif text-textDark
-                  text-[clamp(2.8rem,6vw,6rem)]
+                  text-[clamp(2.6rem,6vw,6rem)]
                   leading-[1.05]
                   mb-[6vh]
                 "
@@ -73,21 +74,20 @@ export default function Hero() {
               <div className="flex justify-center">
                 <button
                   className="
-                    inline-flex items-center gap-[1vw]
+                    inline-flex items-center gap-3
                     border border-textDark
-                    px-[3vw] py-[1.5vh]
-                    text-[clamp(0.75rem,0.9vw,0.85rem)]
+                    px-[2.5rem] py-[1rem]
+                    text-[0.8rem]
                     tracking-widest uppercase
                     hover:bg-textDark hover:text-cream
                     transition
                   "
                 >
-                  Connect with me
+                  CONNECT WITH ME
                   <span aria-hidden>→</span>
                 </button>
               </div>
             </RevealItem>
-
           </div>
         </div>
       </div>
