@@ -4,18 +4,9 @@ import { useState } from "react";
 import RevealItem from "./RevealItem";
 
 const faqs = [
-  {
-    q: "Do you take insurance?",
-    a: "Answer goes here.",
-  },
-  {
-    q: "What are your rates?",
-    a: "Answer goes here.",
-  },
-  {
-    q: "Do you have any openings?",
-    a: "Answer goes here.",
-  },
+  { q: "Do you take insurance?", a: "Answer goes here." },
+  { q: "What are your rates?", a: "Answer goes here." },
+  { q: "Do you have any openings?", a: "Answer goes here." },
 ];
 
 export default function FAQ() {
@@ -27,13 +18,10 @@ export default function FAQ() {
       <div
         className="
           max-w-screen-2xl mx-auto
-          px-[6vw]
-          py-[12vh]
-          flex flex-col
-          lg:flex-row
+          px-[6vw] py-[12vh]
+          flex flex-col lg:flex-row
           items-center
-          gap-[8vh]
-          lg:gap-[6vw]
+          gap-[8vh] lg:gap-[6vw]
         "
       >
         {/* IMAGE BLOCK */}
@@ -46,7 +34,7 @@ export default function FAQ() {
                 rounded-t-[999px]
                 overflow-hidden
                 bg-sand
-                transition-transform duration-500 ease-out
+                transition-transform duration-500
                 ${open !== null ? "scale-[1.04]" : "scale-100"}
               `}
               style={{
@@ -65,60 +53,56 @@ export default function FAQ() {
               FAQs
             </h2>
           </RevealItem>
-<div className="border-t border-textDark/40">
-  {faqs.map((item, i) => (
-    <RevealItem key={i} delay={baseDelay + 0.02 * i}>
-      <div className="border-b border-textDark/40">
-        <button
-          onClick={() => setOpen(open === i ? null : i)}
-          className="
-            w-full
-            py-[4vh]
-            flex items-center gap-[1.6rem]
-            text-left
-            font-medium
-          "
-        >
-          {/* PLUS / MINUS ICON */}
-          <span
-            className="
-              flex items-center justify-center
-              w-8 h-8
-              border border-textDark
-              rounded-full
-              text-[1.6rem]
-              leading-none
-            "
-          >
-            {open === i ? "−" : "+"}
-          </span>
 
-          {/* QUESTION TEXT — BIG */}
-          <span className="text-[clamp(1.8rem,2.4vw,2.2rem)]">
-            {item.q}
-          </span>
-        </button>
+          {/* TOP LINE */}
+          <div className="border-t border-textDark/40">
+            {faqs.map((item, i) => (
+              <RevealItem key={i} delay={baseDelay + 0.02 * i}>
+                <div className="border-b border-textDark/40">
+                  <button
+                    onClick={() => setOpen(open === i ? null : i)}
+                    className="
+                      w-full
+                      py-[4vh]
+                      flex items-center gap-[2rem]
+                      text-left
+                    "
+                  >
+                    {/* BIG + / − ICON (NO BORDER) */}
+                    <span
+                      className="
+                        text-textDark
+                        leading-none
+                        font-light
+                        text-[clamp(3.2rem,3.8vw,3.8rem)]
+                      "
+                    >
+                      {open === i ? "−" : "+"}
+                    </span>
 
-        {open === i && (
-          <p
-            className="
-              pl-[4.2rem]
-              pb-[4vh]
-              text-[clamp(1.3rem,1.6vw,1.5rem)]
-              leading-relaxed
-              text-textDark/80
-            "
-          >
-            {item.a}
-          </p>
-        )}
-      </div>
-    </RevealItem>
-  ))}
-</div>
+                    {/* QUESTION */}
+                    <span className="text-[clamp(1.8rem,2.4vw,2.2rem)]">
+                      {item.q}
+                    </span>
+                  </button>
 
-
-
+                  {open === i && (
+                    <p
+                      className="
+                        pl-[4.6rem]
+                        pb-[4vh]
+                        text-[clamp(1.3rem,1.6vw,1.5rem)]
+                        leading-relaxed
+                        text-textDark/80
+                      "
+                    >
+                      {item.a}
+                    </p>
+                  )}
+                </div>
+              </RevealItem>
+            ))}
+          </div>
         </div>
       </div>
     </section>
