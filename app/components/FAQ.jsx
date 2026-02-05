@@ -6,15 +6,15 @@ import RevealItem from "./RevealItem";
 const faqs = [
   {
     q: "Do you take insurance?",
-    a: "I do not accept insurance at this time, but I can provide superbills for out-of-network reimbursement.",
+    a: "Answer goes here.",
   },
   {
     q: "What are your rates?",
-    a: "Rates vary depending on session length. Please reach out to discuss current pricing.",
+    a: "Answer goes here.",
   },
   {
     q: "Do you have any openings?",
-    a: "Availability changes regularly. Contact me and we’ll find a time that works for you.",
+    a: "Answer goes here.",
   },
 ];
 
@@ -40,13 +40,15 @@ export default function FAQ() {
         <div className="w-full lg:w-[40%] flex justify-center">
           <RevealItem delay={baseDelay}>
             <div
-              className="
+              className={`
                 w-[clamp(16rem,28vw,24rem)]
                 aspect-[3/4]
                 rounded-t-[999px]
                 overflow-hidden
                 bg-sand
-              "
+                transition-transform duration-500 ease-out
+                ${open !== null ? "scale-[1.04]" : "scale-100"}
+              `}
               style={{
                 backgroundImage: "url('/images/faq.png')",
                 backgroundSize: "cover",
@@ -65,33 +67,57 @@ export default function FAQ() {
           </RevealItem>
 
           <div className="divide-y divide-textDark/30">
-            {faqs.map((item, i) => (
-              <RevealItem key={i} delay={baseDelay + 0.02 * i}>
-                <button
-                  onClick={() => setOpen(open === i ? null : i)}
-                  className="
-                    w-full
-                    py-[3vh]
-                    flex justify-between items-center
-                    text-left
-                    text-[clamp(1rem,1.2vw,1.1rem)]
-                    font-medium
-                  "
-                >
-                  {item.q}
-                  <span className="text-xl">
-                    {open === i ? "−" : "+"}
-                  </span>
-                </button>
+  {faqs.map((item, i) => (
+    <RevealItem key={i} delay={baseDelay + 0.02 * i}>
+      <div>
+        <button
+          onClick={() => setOpen(open === i ? null : i)}
+          className="
+            w-full
+            py-[3.5vh]
+            flex items-center gap-[1.6rem]
+            text-left
+            font-medium
+          "
+        >
+          {/* PLUS / MINUS ICON */}
+          <span
+            className="
+              flex items-center justify-center
+              w-8 h-8
+              border border-textDark
+              rounded-full
+              text-[1.6rem]
+              leading-none
+            "
+          >
+            {open === i ? "−" : "+"}
+          </span>
 
-                {open === i && (
-                  <p className="pb-[3vh] text-[clamp(0.95rem,1.1vw,1.05rem)] text-textDark/80">
-                    {item.a}
-                  </p>
-                )}
-              </RevealItem>
-            ))}
-          </div>
+          {/* QUESTION TEXT — 200% BIGGER */}
+          <span className="text-[clamp(1.8rem,2.4vw,2.2rem)]">
+            {item.q}
+          </span>
+        </button>
+
+        {open === i && (
+          <p
+            className="
+              pl-[4.2rem]
+              pb-[3.5vh]
+              text-[clamp(1.3rem,1.6vw,1.5rem)]
+              leading-relaxed
+              text-textDark/80
+            "
+          >
+            {item.a}
+          </p>
+        )}
+      </div>
+    </RevealItem>
+  ))}
+</div>
+
         </div>
       </div>
     </section>
